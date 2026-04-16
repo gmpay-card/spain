@@ -11,91 +11,97 @@
         body { 
             margin: 0; 
             padding: 0; 
-            background-color: #000000; 
+            background-color: #0a0a0a; /* Чуть светлее черного для видимости теней */
             display: flex; 
             flex-direction: column; 
             align-items: center;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #fff;
         }
 
         .presentation-container {
-            width: 100%;
+            width: 95%;
             max-width: 900px;
+            padding: 40px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        img {
+        /* Стильное обрамление слайда */
+        .slide {
             width: 100%;
             height: auto;
             display: block;
-            /* Расстояние между слайдами */
-            margin-bottom: 50px; 
+            margin-bottom: 70px; /* Увеличенное расстояние для акцента на каждом слайде */
+            border-radius: 12px; /* Скругление углов */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая "стеклянная" рамка */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Глубокая тень */
+            transition: transform 0.3s ease;
             animation: fadeIn 1s ease-in;
         }
 
-        /* Стиль золотой кнопки */
+        /* Эффект при наведении (на десктопе) */
+        .slide:hover {
+            transform: translateY(-5px);
+            border-color: rgba(191, 149, 63, 0.4); /* Золотистый отсвет при наведении */
+        }
+
         .gold-btn {
             display: inline-block;
-            padding: 20px 40px;
-            /* Отступы, чтобы кнопка не прилипала к слайдам */
-            margin-bottom: 60px; 
+            padding: 22px 45px;
+            margin-bottom: 80px; 
             background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-            color: #000; /* Черный текст на золотом фоне выглядит премиальнее */
+            color: #000; 
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 800;
-            border-radius: 5px;
+            border-radius: 10px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 20px rgba(191, 149, 63, 0.5);
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(191, 149, 63, 0.3);
             text-align: center;
-            width: 80%;
-            max-width: 400px;
+            width: 85%;
+            max-width: 380px;
         }
 
         .gold-btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 25px rgba(251, 245, 183, 0.7);
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(251, 245, 183, 0.5);
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 600px) {
-            img { margin-bottom: 30px; }
-            .gold-btn { font-size: 1rem; margin-bottom: 40px; }
+            .slide { margin-bottom: 40px; border-radius: 8px; }
+            .presentation-container { padding-top: 20px; }
         }
     </style>
 </head>
 <body>
 
     <div class="presentation-container">
-        <img src="slide1.jpg" alt="Intro">
-        <img src="slide2.jpg" alt="Obstáculo">
-        <img src="slide3.jpg" alt="Producto">
-        <img src="slide4.jpg" alt="Números">
-        <img src="slide5.jpg" alt="Resultados">
-        <img src="slide6.jpg" alt="Cliente Ideal">
-        <img src="slide7.jpg" alt="Esfuerzo">
-        <img src="slide8.jpg" alt="Seguridad">
-        <img src="slide9.jpg" alt="Tranquilidad">
-        <img src="slide10.jpg" alt="Oficina Digital">
-
+        <img src="slide1.jpg" class="slide" alt="Intro">
+        <img src="slide2.jpg" class="slide" alt="Obstáculo">
+        <img src="slide3.jpg" class="slide" alt="Producto">
+        <img src="slide4.jpg" class="slide" alt="Números">
+        <img src="slide5.jpg" class="slide" alt="Resultados">
+        <img src="slide6.jpg" class="slide" alt="Cliente Ideal">
+        <img src="slide7.jpg" class="slide" alt="Esfuerzo">
+        <img src="slide8.jpg" class="slide" alt="Seguridad">
+        <img src="slide9.jpg" class="slide" alt="Tranquilidad">
+        <img src="slide10.jpg" class="slide" alt="Oficina Digital"> 
         <a href="https://t.me/gmcard_bot?start=YOUR_ID" class="gold-btn">
             Entrar en el sistema
         </a>
-
-        <img src="slide11.jpg" alt="Start Today">
-     
-        <a href="https://t.me/gmcard_bot?start=YOUR_ID" style="margin-bottom: 100px;" class="gold-btn">
+        <img src="slide11.jpg" class="slide" alt="Start Today">
+        <a href="https://t.me/gmcard_bot?start=YOUR_ID" class="gold-btn">
             Asegurar mi plaza ahora
         </a>
-
     </div>
 
 </body>
