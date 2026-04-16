@@ -47,6 +47,7 @@
             border-color: rgba(191, 149, 63, 0.4); /* Золотистый отсвет при наведении */
         }
 
+       /* Базовый стиль кнопки (десктоп) */
         .gold-btn {
             display: inline-block;
             padding: 22px 45px;
@@ -76,9 +77,25 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* --- НОВЫЕ НАСТРОЙКИ ДЛЯ МОБИЛЬНЫХ --- */
         @media (max-width: 600px) {
-            .slide { margin-bottom: 40px; border-radius: 8px; }
             .presentation-container { padding-top: 20px; }
+            
+            .slide { 
+                margin-bottom: 40px; 
+                border-radius: 8px; 
+            }
+            
+            .gold-btn { 
+                padding: 14px 24px;   /* Компактные отступы */
+                font-size: 0.85rem;   /* Элегантный мелкий шрифт */
+                width: auto;          /* Кнопка по размеру текста */
+                min-width: 220px;     /* Но не слишком узкая */
+                max-width: 80%;       /* Чтобы не упиралась в края */
+                margin-bottom: 60px;  /* Отступ до следующего слайда */
+                letter-spacing: 1.2px;
+                border-radius: 8px;   /* Соответствует скруглению слайдов */
+            }
         }
     </style>
 </head>
